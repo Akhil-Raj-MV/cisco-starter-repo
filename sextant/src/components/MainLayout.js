@@ -1,9 +1,9 @@
 import React,{useState} from 'react'
 import Container from './Container';
 import Ip from './Endpoints/Ip';
-import Dp2 from './Endpoints/Dp2';
 import Dp3 from './Endpoints/Dp3';
 import Dp4 from './Endpoints/Dp4'
+import Latency from './Endpoints/Latency';
 
 
 
@@ -42,7 +42,7 @@ const MainLayout = () => {
         }
         {(dataPoint===2) && 
             <Container dataPoint={dataPoint} setDataPoint={setDataPoint}>
-                {<Dp2/>}
+                {<Latency/>}
             </Container>
         }
         {(dataPoint===3) && 

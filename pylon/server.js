@@ -2,7 +2,12 @@ const webSocketServer = require('websocket').server;
 const http = require('http');
 
 const server = http.createServer();
-server.listen(55455);
+
+server.listen(55455, () => {
+    console.log('opened server on', server.address().port);
+  });
+
+
 const wsServer = new webSocketServer({ httpServer: server });
 
 wsServer.on('request', function (request) {
@@ -12,3 +17,4 @@ wsServer.on('request', function (request) {
         connection.sendUTF(new Date().getTime())
     }, 100);
 });
+

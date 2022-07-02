@@ -38,7 +38,7 @@ const Container = ({setDataPoint,children}) => {
               )
             }}
             className="block py-2.5 px-4 rounded transition duration-200 hover:bg-green-500 hover:text-white">
-            DataPoint 2
+            Latency INFO
           </a>
           <a href="/"
             onClick={(e)=>{
